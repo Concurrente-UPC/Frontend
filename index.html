@@ -15,71 +15,48 @@
 
         <h5>Información Básica</h5>
         <div id="basic-info">
-            <select class="form-select form-select-sm mb-3">
-                <option selected>---Seleccione Sexo---</option>
-                <option value="1">Hombre</option>
-                <option value="2">Mujer</option>
-            </select>
-
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="had-contact">
-                <label class="form-check-label" for="had-contact">¿Tuvo contacto con alguna persona con COVID-19?</label>
+            <div class="col-4">
+                <label for="sex-input">Sexo:</label>
+                <select id="sex-input" class="form-select form-select-sm mb-3" required>
+                    <option value="" disabled selected></option>
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+                </select>
             </div>
+
+            <div class="col-4">
+                <label for="age-input">Edad:</label>
+                <input type="number" class="form-control form-control-sm mb-3" id="age-input" value="18" min="0" max="120">
+            </div>
+
+        </div>
+
+        <div class="col-4">
+            <label for="contact-input">¿Ha tenido contacto con alguna persona con COVID-19?</label>
+            <select id="contact-input" class="form-select form-select-sm mb-3" required>
+                <option value="" disabled selected></option>
+                <option value="1">Sí</option>
+                <option value="2">No</option>
+                <option value="3">No sé</option>
+            </select>
         </div>
 
         <h5>Síntomas comunes</h5>
         <div id="common-symptoms">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="symptom-1">
-                <label class="form-check-label" for="symptom-1">Symptom 1</label>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="symptom-2">
-                <label class="form-check-label" for="symptom-2">Symptom 1</label>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="symptom-3">
-                <label class="form-check-label" for="symptom-3">Symptom 1</label>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="symptom-4">
-                <label class="form-check-label" for="symptom-4">Symptom 1</label>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="symptom-5">
-                <label class="form-check-label" for="symptom-5">Symptom 1</label>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="symptom-6">
-                <label class="form-check-label" for="symptom-6">Symptom 1</label>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="symptom-7">
-                <label class="form-check-label" for="symptom-7">Symptom 1</label>
-            </div>
-
 
         </div>
 
         <h5>Otros Síntomas</h5>
         <div id="other-symptoms">
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="symptom-x1">
-                <label class="form-check-label" for="symptom-x1">Symptom 2</label>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="symptom-x2">
-                <label class="form-check-label" for="symptom-x2">Symptom 2</label>
-            </div>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="symptom-x3">
-                <label class="form-check-label" for="symptom-x3">Symptom 2</label>
-            </div>
+
         </div>
 
-        <h5>Resultados</h5>
+        <h5>Resultado</h5>
         <div id="results">
-            <button class="btn btn-info">Resultados</button>
+            <button class="btn btn-info" onclick="makeRequest()">Resultados</button>
+
+            <div id="results-detail">
+            </div>
         </div>
     </div>
     <div id="footer">
@@ -88,5 +65,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>-->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/service.js"></script>
 </body>
 </html>
