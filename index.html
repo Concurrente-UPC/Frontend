@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 <body>
-    <div id="header">
+    <ul class="nav nav-pills nav-justified">
+        <li class="nav-item"><a class="nav-link" href="grupo-riesgo.html">Grupo de Riesgo</a></li>
+        <li class="active nav-item"><a class="nav-link" href="#">Detección de Covid</a></li>
+    </ul>
+    <div id="header"  >
         <h2>Detección de Covid-19</h2>
     </div>
     <div id="main">
 
-        <h5>Información Básica</h5>
+        <h5 >Información Básica</h5>
         <div id="basic-info">
             <div class="col-4">
                 <label for="sex-input">Sexo:</label>
@@ -31,7 +35,7 @@
 
         </div>
 
-        <div class="col-4">
+        <div class="col-4"  >
             <label for="contact-input">¿Ha tenido contacto con alguna persona con COVID-19?</label>
             <select id="contact-input" class="form-select form-select-sm mb-3" required>
                 <option value="" disabled selected></option>
@@ -41,7 +45,7 @@
             </select>
         </div>
 
-        <h5>Síntomas comunes</h5>
+        <h5  >Síntomas comunes</h5>
         <div id="common-symptoms">
 
         </div>
@@ -51,7 +55,7 @@
 
         </div>
 
-        <h5>Resultado</h5>
+        <h5 >Resultado</h5>
         <div id="results">
             <button class="btn btn-info" onclick="makeRequest()">Resultados</button>
 
