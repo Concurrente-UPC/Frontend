@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta lang="es">
+    <title>Diagnostico COVID-19</title>
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="header">
+        <h2>Registro de Datos</h2>
+    </div>
+    <div id="main" class="container">
+
+        <h5>Información Básica</h5>
+        <div id="basic-info">
+            <div class="col-4">
+                <label for="sex-input">Sexo:</label>
+                <select id="sex-input" class="form-select form-select-sm mb-3" required>
+                    <option value="" disabled selected></option>
+                    <option value="1">Masculino</option>
+                    <option value="2">Femenino</option>
+                </select>
+            </div>
+
+            <div class="col-4">
+                <label for="age-input">Edad:</label>
+                <input type="number" class="form-control form-control-sm mb-3" id="age-input" value="18" min="0" max="120">
+            </div>
+
+        </div>
+
+        <h5>Enfermedades</h5>
+        <div id="diseases">
+
+        </div>
+
+        </div>
+
+        <h5>Resultado</h5>
+        <div id="results">
+            <button class="btn btn-info" onclick="makeRequest()">Resultados</button>
+
+            <div id="results-detail">
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/grupo-riesgo.js"></script>
+    <script src="assets/js/service-grupo-riesgo.js"></script>
+</body>
+</html>

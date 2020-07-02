@@ -176,7 +176,7 @@ function makeRequest() {
 
 function updateResult(result) {
     let detail, color;
-    if (result == 1) {
+    if (result === 1) {
         detail = "POSITIVO";
         color = "alert-danger";
     } else {
