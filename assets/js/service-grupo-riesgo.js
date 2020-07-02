@@ -114,6 +114,7 @@ function makeRequest() {
             console.error('Error:', err);
         })
         .then(res => {
+            console.log(res)
             updateResult(res.result);
         });
 }

@@ -155,7 +155,7 @@ function prepareData() {
 function makeRequest() {
     clearValidation();
     const requestObj = prepareData();
-    const url = 'http://localhost:3000/KNN';
+    const url = 'http://localhost:3000/KNN_deteccion';
 
     const init = {
         method: 'POST',
